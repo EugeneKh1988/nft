@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react"
+import Header from "./Header";
 
 interface ILayout {
     title: string,
@@ -16,6 +17,7 @@ const Layout: React.FC<ILayout> = ({title, description, children}) => {
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
             </Head>
             <main>
+                <Header></Header>
                 <div className="container mx-auto">
                     {children}
                 </div>
