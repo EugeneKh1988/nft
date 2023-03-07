@@ -12,17 +12,17 @@ import SvgIcons from "./SvgIcons";
 
 const Header: React.FC = () => {
     return (
-      <div className="navbar min-h-[120px] bg-white/20 fixed z-10 backdrop-blur-md justify-between px-[60px]">
+      <div className="navbar min-h-[120px] bg-white/20 fixed z-10 backdrop-blur-md justify-between px-4 xl:px-[60px]">
         {/* logo image */}
-        <div className="max-w-[164px]">
+        <div className="w-[164px] mr-3">
           <Image src={logoImage} alt="Logo"></Image>
         </div>
         {/* search field */}
-        <div className="grow max-w-[300px] relative">
+        <div className="hidden lg:block grow max-w-[300px] relative">
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             color="#5a5d79"
-            className="w-[20px] absolute left-3"
+            className="w-[20px] absolute left-3 top-3"
           />
           <input
             type="text"
@@ -33,13 +33,13 @@ const Header: React.FC = () => {
         </div>
 
         {/* horizontal menu */}
-        <ul className="flex items-center text-[20px]">
-          <li className="px-2">
+        <ul className="hidden lg:flex items-center text-[18px]">
+          <li className="px-1">
             <a className="block px-4 py-2 hover:text-[#8358ff] cursor-pointer">
               Home
             </a>
           </li>
-          <li className="dropdown dropdown-hover px-2">
+          <li className="dropdown dropdown-hover px-1">
             <label
               tabIndex={0}
               className="block px-4 py-2 hover:text-[#8358ff] cursor-pointer"
@@ -48,15 +48,25 @@ const Header: React.FC = () => {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu shadow bg-white rounded-box w-[350px] text-[14px]"
+              className="dropdown-content menu shadow bg-white rounded-box w-[450px] text-[14px]"
             >
               <div className="grid grid-cols-2">
                 <ul className="menu menu-compact w-auto rounded-box px-2 py-4">
                   <li>
-                    <a>Maintenance</a>
+                    <a className="flex justify-between">
+                      Maintenance
+                      <span className="badge bg-[#10b981] text-white rounded-[5px] border-none">
+                        NEW
+                      </span>
+                    </a>
                   </li>
                   <li>
-                    <a>Single Case Study</a>
+                    <a className="flex justify-between">
+                      Single Case Study
+                      <span className="badge bg-[#10b981] text-white rounded-[5px] border-none">
+                        NEW
+                      </span>
+                    </a>
                   </li>
                   <li>
                     <a>Item Details</a>
@@ -82,10 +92,20 @@ const Header: React.FC = () => {
                 </ul>
                 <ul className="menu menu-compact w-auto rounded-box px-2 py-4">
                   <li>
-                    <a>Case Studies</a>
+                    <a className="flex justify-between">
+                      Case Studies
+                      <span className="badge bg-[#10b981] text-white rounded-[5px] border-none">
+                        NEW
+                      </span>
+                    </a>
                   </li>
                   <li>
-                    <a>Careers</a>
+                    <a className="flex justify-between">
+                      Careers
+                      <span className="badge bg-[#10b981] text-white rounded-[5px] border-none">
+                        NEW
+                      </span>
+                    </a>
                   </li>
                   <li>
                     <a>Explore Colections</a>
@@ -109,7 +129,7 @@ const Header: React.FC = () => {
               </div>
             </ul>
           </li>
-          <li className="dropdown dropdown-hover px-2">
+          <li className="dropdown dropdown-hover px-1">
             <label
               tabIndex={1}
               className="block px-4 py-2 hover:text-[#8358ff] cursor-pointer"
@@ -118,44 +138,134 @@ const Header: React.FC = () => {
             </label>
             <ul
               tabIndex={1}
-              className="dropdown-content menu shadow bg-white rounded-box w-[350px] text-[14px]"
+              className="dropdown-content menu shadow bg-white rounded-box w-[400px] text-[14px]"
             >
               <div className="grid grid-cols-2">
                 <ul className="menu menu-compact w-auto rounded-box px-2 py-4">
                   <li>
-                    <a>All NFTs</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="nft"
+                          width={24}
+                          height={24}
+                          className="fill-[#131740] w-4 h-4"
+                        />
+                      </span>
+                      All NFTs
+                    </a>
                   </li>
                   <li>
-                    <a>Photography</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="photography"
+                          width={24}
+                          height={24}
+                          className="fill-[#428af8] w-4 h-4"
+                        />
+                      </span>
+                      Photography
+                    </a>
                   </li>
                   <li>
-                    <a>Art</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="art"
+                          width={24}
+                          height={24}
+                          className="fill-[#36c496] w-4 h-4"
+                        />
+                      </span>
+                      Art
+                    </a>
                   </li>
                   <li>
-                    <a>Sports</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="sports"
+                          width={24}
+                          height={24}
+                          className="fill-[#737ef2] w-4 h-4"
+                        />
+                      </span>
+                      Sports
+                    </a>
                   </li>
                   <li>
-                    <a>Collectibles</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="mouse"
+                          width={24}
+                          height={24}
+                          className="fill-[#fbc675] w-4 h-4"
+                        />
+                      </span>
+                      Collectibles
+                    </a>
                   </li>
                 </ul>
                 <ul className="menu menu-compact w-auto rounded-box px-2 py-4">
                   <li>
-                    <a>Tradind Cards</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="card"
+                          width={24}
+                          height={24}
+                          className="fill-[#8dd059] w-4 h-4"
+                        />
+                      </span>
+                      Tradind Cards
+                    </a>
                   </li>
                   <li>
-                    <a>Domain Names</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="letter"
+                          width={24}
+                          height={24}
+                          className="fill-[#8358ff] w-4 h-4"
+                        />
+                      </span>
+                      Domain Names
+                    </a>
                   </li>
                   <li>
-                    <a>Utility</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="utility"
+                          width={24}
+                          height={24}
+                          className="fill-[#f05c5c] w-4 h-4"
+                        />
+                      </span>
+                      Utility
+                    </a>
                   </li>
                   <li>
-                    <a>Virtual Worlds</a>
+                    <a>
+                      <span className="rounded-full bg-[#f5f8fa] p-2">
+                        <SvgIcons
+                          name="world"
+                          width={24}
+                          height={24}
+                          className="fill-[#46c7e3] w-4 h-4"
+                        />
+                      </span>
+                      Virtual Worlds
+                    </a>
                   </li>
                 </ul>
               </div>
             </ul>
           </li>
-          <li className="dropdown dropdown-hover px-2">
+          <li className="dropdown dropdown-hover px-1">
             <label
               tabIndex={2}
               className="block px-4 py-2 hover:text-[#8358ff] cursor-pointer"
@@ -186,19 +296,21 @@ const Header: React.FC = () => {
               </li>
             </ul>
           </li>
-          <li className="px-2">
-            <a className="block px-4 py-2">Create</a>
+          <li className="px-1">
+            <a className="block px-4 py-2 hover:text-[#8358ff] cursor-pointer">
+              Create
+            </a>
           </li>
         </ul>
 
         {/* buttons */}
         <div>
-          <button className="btn btn-circle group bg-white focus:bg-[#8358ff] hover:bg-[#8358ff] border-[#ccc] hover:border-[#8358ff] w-12 h-10 mr-2">
+          <button className="hidden lg:inline-flex btn btn-circle group bg-white focus:bg-[#8358ff] hover:bg-[#8358ff] border-[#ccc] hover:border-[#8358ff] w-12 h-10 mr-2">
             <SvgIcons
               name="wallet"
               width={24}
               height={24}
-              className="group-hover:fill-white group-focus:fill-white fill-black"
+              className="group-hover:fill-white group-focus:fill-white fill-[#131740]"
             />
           </button>
           <button className="btn btn-circle group bg-white focus:bg-[#8358ff] hover:bg-[#8358ff] border-[#ccc] hover:border-[#8358ff] w-12 h-10 mr-2">
@@ -206,7 +318,7 @@ const Header: React.FC = () => {
               name="user"
               width={24}
               height={24}
-              className="group-hover:fill-white group-focus:fill-white fill-black"
+              className="group-hover:fill-white group-focus:fill-white fill-[#131740]"
             />
           </button>
           <button className="btn btn-circle group bg-white focus:bg-[#8358ff] hover:bg-[#8358ff] border-[#ccc] hover:border-[#8358ff] w-12 h-10">
@@ -214,7 +326,15 @@ const Header: React.FC = () => {
               name="moon"
               width={24}
               height={24}
-              className="group-hover:fill-white group-focus:fill-white fill-black"
+              className="group-hover:fill-white group-focus:fill-white fill-[#131740]"
+            />
+          </button>
+          <button className="ml-2 lg:hidden btn btn-circle group bg-white focus:bg-[#8358ff] hover:bg-[#8358ff] border-[#ccc] hover:border-[#8358ff] w-12 h-10">
+            <SvgIcons
+              name="expand"
+              width={24}
+              height={24}
+              className="group-hover:fill-white group-focus:fill-white fill-[#131740]"
             />
           </button>
         </div>
