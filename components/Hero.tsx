@@ -1,7 +1,13 @@
 import React from "react";
 import Image from "next/image";
+
+// images
 import hero from "@/public/hero.jpg";
 import gradient from "@/public/gradient.jpg";
+import flyImg from "@/public/3D_elements.png";
+
+// styles
+import styles from "@/styles/Hero.module.css";
 
 
 const Hero: React.FC = () => {
@@ -19,14 +25,14 @@ const Hero: React.FC = () => {
           <div className="pt-5">
             <button
               className="btn bg-[#8358ff] text-white rounded-[18px] border-none
-             focus:bg-[#552cce] hover:bg-[#552cce] normal-case max-w-[170px] w-full mr-4"
+             focus:bg-[#552cce] hover:bg-[#552cce] normal-case max-w-[170px] w-full mr-4 shadow-md"
             >
               Upload
             </button>
             <button
               className="btn bg-white text-[#8358ff] rounded-[18px] border-[#ccc]
              focus:bg-[#8358ff] hover:bg-[#8358ff] normal-case focus:text-white
-             hover:text-white max-w-[170px] w-full hover:border-none"
+             hover:text-white max-w-[170px] w-full hover:border-none shadow-md"
             >
               Explore
             </button>
@@ -38,6 +44,7 @@ const Hero: React.FC = () => {
             alt="Hero image"
             className="rotate-[12deg] rounded-[160px]"
           />
+          <Image src={flyImg} alt="Flying img" className={styles.animation} />
         </div>
       </div>
     </div>
