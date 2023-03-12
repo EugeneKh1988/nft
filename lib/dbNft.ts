@@ -16,12 +16,12 @@ const biggestLikes: (nftCount: number) => Promise<INft> = async (nftCount) => {
         const db = client.db("nft")
         const collection = db.collection("nft")
         const resArr = await collection.find().sort({likes: -1}).limit(nftCount).toArray();
-        
         return resArr;
     } catch (error) {
         console.log(error);
+        return null;
     }
-    return [];
+    return null;
 };
 
 export {

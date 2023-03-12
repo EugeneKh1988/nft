@@ -7,10 +7,15 @@ const biggestLikes: (req:NextApiRequest, res: NextApiResponse) => Promise<void> 
       const { count } = req.query;
       if (count && !Array.isArray(count)) {
         const retNft = parseInt(count) > 0 ? await likes(parseInt(count)) : [];
-        return res.json({nft: retNft});
+        if (Array.isArray(retNft)) {
+          return res.json({nft: retNft});
+        } 
+        else {
+          return res.json({error: true});
+        }
       }
     }
-    return res.json({status: false});
+    return res.json({error: true});
 };
 
 export default biggestLikes;
