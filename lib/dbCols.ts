@@ -15,9 +15,7 @@ const collections: (startDate: Date, endDate: Date) => Promise<ICol[] | null> = 
         const client = await clientPromise;
         const db = client.db("nft")
         const collection = db.collection("ethcollection")
-        const resArr = await collection.find({modify_date: {$in:[startDate, endDate]}}).toArray();
-        console.log("Start", startDate, "End", endDate);
-        
+        const resArr = await collection.find({modify_date: {$gte: startDate, $lte: endDate}}).toArray();
         return resArr;
     } catch (error) {
         console.log(error);

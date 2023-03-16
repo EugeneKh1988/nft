@@ -6,12 +6,13 @@ const collections: (req:NextApiRequest, res: NextApiResponse) => Promise<void> =
     if (req.method === 'GET') {
       const { days } = req.query;
       if (days && !Array.isArray(days)) {
-        let startDate = new Date(2023, 2, 14, 18);
-        const endDate = new Date(2023, 2, 14, 18);
+        let startDate = new Date(2023, 2, 14, 20);
+        const endDate = new Date(2023, 2, 14, 20);
         if (days === "1") {
           startDate.setDate(startDate.getDate() - 1);
         } else if (days === "7") {
           startDate.setDate(startDate.getDate() - 7);
+          endDate.setDate(endDate.getDate() - 2);
         } else if (days === "30") {
           startDate.setDate(startDate.getDate() - 30);
         }
