@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import HotBids from "@/components/HotBid/HotBids";
 import Collections from "@/components/Collections/Collections";
 import Trending from "@/components/Trending/Trending";
+import News from "@/components/News";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <HotBids nftCount={7} />
       <Collections />
       <Trending />
+      <News />
     </Layout>
   );
 };
