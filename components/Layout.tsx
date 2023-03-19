@@ -16,7 +16,7 @@ const Layout: React.FC<ILayout> = ({title, description, children}) => {
                 <meta name="description" content={description} />
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
             </Head>
-            <main>
+            <main className="bg-white">
                 <Header></Header>
                 <div className="container mx-auto">
                     {children}

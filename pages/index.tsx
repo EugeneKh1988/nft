@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import HotBids from "@/components/HotBid/HotBids";
 import Collections from "@/components/Collections/Collections";
+import Trending from "@/components/Trending/Trending";
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
       <Hero />
       <HotBids nftCount={7} />
       <Collections />
+      <Trending />
     </Layout>
   );
 };

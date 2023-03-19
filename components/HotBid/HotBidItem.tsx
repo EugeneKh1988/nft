@@ -49,7 +49,7 @@ const HotBidItem: React.FC<IHotBidItem> = ({ slide }) => {
       <div className="card-body p-5 pt-0">
         <div className="flex justify-between">
           <Link href={""}>
-            <h2 className="card-title hover:text-[#8358ff]">{slide.name}</h2>
+            <h2 className="card-title hover:text-[#8358ff] text-[18px]">{slide.name}</h2>
           </Link>
           <div className="inline-flex border rounded-md px-1 py-1">
             <Image src={ethSvg} alt="ETH" className="w-3 mr-2" />
