@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react"
+import Footer from "./Footer";
 import Header from "./Header";
 
 interface ILayout {
@@ -21,6 +22,7 @@ const Layout: React.FC<ILayout> = ({title, description, children}) => {
                 <div className="container mx-auto">
                     {children}
                 </div>
+                <Footer />
             </main>
         </>
     );
