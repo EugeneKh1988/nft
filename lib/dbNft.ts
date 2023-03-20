@@ -44,7 +44,16 @@ const nft: (options: IReqOpt) => Promise<INft> = async (options) => {
         const client = await clientPromise;
         const db = client.db("nft")
         const collection = db.collection("nft")
-        const queryObj =  {type: options?.type, verified: options?.verified, lazy_minted: options?.lazyMinted}
+        let queryObj =  {} as any;
+        if (options?.type !== "all") {
+            queryObj.type = options?.type;
+        }
+        if (options?.verified) {
+            queryObj.verified = options?.verified;
+        }
+        if (options?.lazyMinted) {
+            queryObj.lazy_minted = options?.lazyMinted;
+        }
         let sortBy = {};
         if (options.sortBy) {
             const field = options.sortBy?.field;

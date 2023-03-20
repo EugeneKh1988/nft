@@ -15,9 +15,6 @@ const nftHandle: (req:NextApiRequest, res: NextApiResponse) => Promise<void> = a
       if (lazyMinted && !Array.isArray(lazyMinted)) {
         options.lazyMinted = lazyMinted === "1" ? true : false;
       }
-      if (lazyMinted && !Array.isArray(lazyMinted)) {
-        options.lazyMinted = lazyMinted === "1" ? true : false;
-      }
       if (sortField && sortDirection === "asc" || sortDirection === "desc" && !Array.isArray(sortField)) {
         options.sortBy = {
             field: sortField as string,

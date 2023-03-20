@@ -57,9 +57,9 @@ const Trending: React.FC = () => {
           setLazyMinted(lazyMinted)
         }
       />
-      <div className="py-3">
+      <div className="py-3 lg:px-[100px] grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {nft.map((nftItem) => (
-          <TrendingItem item={nftItem} />
+          <TrendingItem key={nftItem._id} item={nftItem} />
         ))}
       </div>
     </div>

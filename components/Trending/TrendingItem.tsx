@@ -6,7 +6,7 @@ import Link from "next/link";
 // images
 import fire from "@/public/fire.png";
 import ethSvg from "@/public/eth-icon.svg";
-import { faClockRotateLeft, faHeart as solidHeart, faListDots } from "@fortawesome/free-solid-svg-icons";
+import { faClockRotateLeft, faEllipsisH, faHeart as solidHeart, faListDots } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 
 
@@ -38,7 +38,7 @@ const TrendingItem: React.FC<ITrendingItem> = ({ item }) => {
         <Link href={""}>
           <img src={item.img_path} alt={item.name} className="rounded-[16px]" />
         </Link>
-        <div className="inline-flex items-center bg-white rounded-md absolute top-2 right-2">
+        <div className="inline-flex items-center bg-white rounded-md absolute top-7 right-8 p-1">
           <FontAwesomeIcon
             icon={liked ? solidHeart : regularHeart}
             className={
@@ -59,7 +59,7 @@ const TrendingItem: React.FC<ITrendingItem> = ({ item }) => {
             </h2>
           </Link>
           <div>
-            <FontAwesomeIcon icon={faListDots} className="w-4" />
+            <FontAwesomeIcon icon={faEllipsisH} className="w-4" />
           </div>
         </div>
         <p>{item.desc}</p>
@@ -69,7 +69,9 @@ const TrendingItem: React.FC<ITrendingItem> = ({ item }) => {
           </a>
           <div className="inline-flex">
             <FontAwesomeIcon icon={faClockRotateLeft} className="w-4 mr-1" />
-            <a className="cursor-pointer text-sm font-medium text-[#131740]">View History</a>
+            <a className="cursor-pointer text-sm font-medium text-[#131740]">
+              View History
+            </a>
           </div>
         </div>
       </div>
