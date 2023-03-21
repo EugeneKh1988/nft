@@ -74,7 +74,7 @@ const TrendingMenu: React.FC<ITrendingMenu> = ({
       <div className="dropdown dropdown-end">
         <label
           tabIndex={0}
-          className="border border-[#e7e8ec] pl-2 pr-20 py-1 rounded-lg relative m-1 font-medium"
+          className="block border border-[#e7e8ec] min-w-[200px] w-full pl-2 pr-30 py-1 rounded-lg relative m-1 font-medium"
         >
           Trending
           <FontAwesomeIcon
