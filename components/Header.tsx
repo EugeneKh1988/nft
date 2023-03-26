@@ -8,6 +8,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 // svg icons
 import SvgIcons from "./SvgIcons";
+import Link from "next/link";
 
 
 const Header: React.FC = () => {
@@ -35,9 +36,9 @@ const Header: React.FC = () => {
         {/* horizontal menu */}
         <ul className="hidden lg:flex items-center text-[18px]">
           <li className="px-1">
-            <a className="block px-4 py-2 hover:text-[#8358ff] cursor-pointer">
+            <Link href="/" className="block px-4 py-2 hover:text-[#8358ff] cursor-pointer">
               Home
-            </a>
+            </Link>
           </li>
           <li className="dropdown dropdown-hover px-1">
             <label
@@ -53,12 +54,12 @@ const Header: React.FC = () => {
               <div className="grid grid-cols-2">
                 <ul className="menu menu-compact w-auto rounded-box px-2 py-4">
                   <li>
-                    <a className="flex justify-between">
+                    <Link href="/maintanance" className="flex justify-between">
                       Maintenance
                       <span className="badge bg-[#10b981] text-white rounded-[5px] border-none">
                         NEW
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="flex justify-between">
