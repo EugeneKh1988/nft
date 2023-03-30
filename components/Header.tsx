@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             color="#5a5d79"
-            className="w-[20px] absolute left-3 top-3"
+            className="w-[16px] absolute left-3 top-4"
           />
           <input
             type="text"
@@ -62,12 +62,12 @@ const Header: React.FC = () => {
                     </Link>
                   </li>
                   <li>
-                    <a className="flex justify-between">
+                    <Link href="/study" className="flex justify-between">
                       Single Case Study
                       <span className="badge bg-[#10b981] text-white rounded-[5px] border-none">
                         NEW
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a>Item Details</a>
