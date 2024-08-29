@@ -21,8 +21,8 @@ const News: React.FC = () => {
           </div>
           <h2 className="text-[#131740] text-lg">1. Setup your wallet</h2>
           <p className="mt-2">
-            Once You've Set Up Your Wallet Of Choice, Connect It To Open Seaby
-            Clicking The NFT Marketplacein The Topright Corner.
+            Once You&apos;ve Set Up Your Wallet Of Choice, Connect It To Open
+            Seaby Clicking The NFT Marketplacein The Topright Corner.
           </p>
         </div>
         <div className="text-center">

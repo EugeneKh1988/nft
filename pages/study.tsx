@@ -73,17 +73,18 @@ const Study: NextPage = () => {
           <p className="text-[16px] mb-4">
             From Layout To Copy To Design, There Are Limitless Combinations Of
             Changes That May Improve Your Visitor-To-Sale Conversion Rate. But
-            What's "Enough" When You're Just Starting Out? What Elements Should
-            You Focus On Testing Before Rolling Out Your Traffic Campaign?
-            Changes That May Improve Your Visitor-To-Sale Conversion Rate. But
-            What's "Enough" When You're Just Starting Out? What Elements Should
-            You Focus On Testing Before Rolling Out Your Traffic Campaign?
+            What&apos;s &quot;Enough&quot; When You&apos;re Just Starting Out?
+            What Elements Should You Focus On Testing Before Rolling Out Your
+            Traffic Campaign? Changes That May Improve Your Visitor-To-Sale
+            Conversion Rate. But What&apos;s &quot;Enough&quot; When You&apos;re
+            Just Starting Out? What Elements Should You Focus On Testing Before
+            Rolling Out Your Traffic Campaign?
           </p>
           <p className="text-[16px] mb-6">
-            Enthusiasm, Commitment And A Long List Of Satisfied Clients Wasn’t
-            Enough For Reborn To Achieve The Growth They Wanted. To Get Ahead Of
-            The Competition, They Partnered With OMG On A Digital Solution
-            Engineered For Market Success.
+            Enthusiasm, Commitment And A Long List Of Satisfied Clients
+            Wasn&apos;t Enough For Reborn To Achieve The Growth They Wanted. To
+            Get Ahead Of The Competition, They Partnered With OMG On A Digital
+            Solution Engineered For Market Success.
           </p>
           <h1 className="text-[#131740] text-3xl font-bold mb-4 capitalize">
             Key Problems
