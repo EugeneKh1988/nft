@@ -166,9 +166,10 @@ const Study: NextPage = () => {
             As You May Already Know, There Are An Infinite Number Of Things You
             Can Test On Your Site To Help You Increase Sales. From Layout To
             Copy To Design, There Are Limitless Combinations Of Changes That May
-            Improve Your Visitor-To-Sale Conversion Rate. But What's "Enough"
-            When You're Just Starting Out? What Elements Should You Focus On
-            Testing Before Rolling Out Your Traffic Campaign?
+            Improve Your Visitor-To-Sale Conversion Rate. But What&apos;s
+            &quot;Enough&quot; When You&apos;re Just Starting Out? What Elements
+            Should You Focus On Testing Before Rolling Out Your Traffic
+            Campaign?
           </p>
         </div>
         <div className="lg:w-1/2 pt-8 lg:pl-8 grid md:grid-cols-2 gap-4">
